@@ -1,4 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { FaTwitter } from "react-icons/fa";
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillYoutube,
+  AiFillInstagram,
+} from "react-icons/ai";
+
 import wave from "./assets/wave.png";
 import node from "./assets/icons8-nodejs-240.png";
 import react from "./assets/icons8-react-native-480.png";
@@ -8,19 +19,27 @@ import aws from "./assets/icons8-amazon-web-services-480.png";
 import firebase from "./assets/icons8-firebase-480.png";
 import docker from "./assets/icons8-docker-240.png";
 import next from "./assets/NEXTJS/icon/dark-background/nextjs-icon-dark-background.png";
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillYoutube,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaTwitter } from "react-icons/fa";
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  function toggleDarkMode() {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-around p-24 ">
+    <main
+      className={
+        darkMode
+          ? "flex min-h-screen flex-col items-center justify-around p-24"
+          : "flex min-h-screen flex-col items-center justify-around p-24 text-black bg-white"
+      }
+    >
       <div className="ml-10 pt-5 font-bold absolute top-0 left-0">
         <p>Anubhav Bhambri</p>
+      </div>
+      <div className="mr-10 pt-5 font-bold absolute top-0 right-0">
+        <button onClick={toggleDarkMode}>{darkMode ? "Light" : "Dark"}</button>
       </div>
       <div className="flex items-center w-3/4">
         <MainContent />
