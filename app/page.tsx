@@ -1,6 +1,12 @@
 import Image from "next/image";
 import wave from "./assets/wave.png";
-import node from "./assets/node.png";
+import node from "./assets/icons8-nodejs-240.png";
+import react from "./assets/icons8-react-native-480.png";
+import mongo from "./assets/icons8-mongodb-480.png";
+import postgres from "./assets/icons8-postgresql-480.png";
+import aws from "./assets/icons8-amazon-web-services-480.png";
+import firebase from "./assets/icons8-firebase-480.png";
+import docker from "./assets/icons8-docker-240.png";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -35,8 +41,8 @@ export default function Home() {
           </p>
           <div className="flex mt-8">
             <AiFillGithub size={35} />
-            <AiFillLinkedin size={35} style={{ marginLeft: "10px" }} />
-            <FaTwitter size={35} style={{ marginLeft: "10px" }} />
+            <AiFillLinkedin size={35} style={{ marginLeft: "15px" }} />
+            <FaTwitter size={35} style={{ marginLeft: "15px" }} />
             {/* <AiFillYoutube size={35} /> */}
             {/* <AiFillInstagram size={35} /> */}
           </div>
@@ -63,44 +69,51 @@ export default function Home() {
           </p>
         </div>
         <Image
-          className="ml-3"
+          className="ml-5"
           alt="node"
-          src="/favicon.ico"
+          src={node}
           width={techIconsSize}
           height={techIconsSize}
         />
         <Image
-          className="ml-3"
+          className="ml-5"
           alt="react"
-          src="/favicon.ico"
+          src={react}
           width={techIconsSize}
           height={techIconsSize}
         />
         <Image
-          className="ml-3"
+          className="ml-5"
           alt="mongo"
-          src="/favicon.ico"
+          src={mongo}
           width={techIconsSize}
           height={techIconsSize}
         />
         <Image
-          className="ml-3"
+          className="ml-5"
           alt="postgres"
-          src="/favicon.ico"
+          src={postgres}
           width={techIconsSize}
           height={techIconsSize}
         />
         <Image
-          className="ml-3"
-          alt="express"
-          src="/favicon.ico"
+          className="ml-5"
+          alt="aws"
+          src={aws}
           width={techIconsSize}
           height={techIconsSize}
         />
         <Image
-          className="ml-3"
-          alt="nest"
-          src="/favicon.ico"
+          className="ml-5"
+          alt="firebase"
+          src={firebase}
+          width={techIconsSize}
+          height={techIconsSize}
+        />
+        <Image
+          className="ml-5"
+          alt="docker"
+          src={docker}
           width={techIconsSize}
           height={techIconsSize}
         />
