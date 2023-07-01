@@ -7,6 +7,7 @@ import postgres from "./assets/icons8-postgresql-480.png";
 import aws from "./assets/icons8-amazon-web-services-480.png";
 import firebase from "./assets/icons8-firebase-480.png";
 import docker from "./assets/icons8-docker-240.png";
+import next from "./assets/NEXTJS/icon/dark-background/nextjs-icon-dark-background.png";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -17,9 +18,9 @@ import { FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-around p-24 bg-white text-black">
+    <main className="flex min-h-screen flex-col items-center justify-around p-24 ">
       <div className="ml-10 pt-5 font-bold absolute top-0 left-0">
-        <p>Anubhav</p>
+        <p>Anubhav Bhambri</p>
       </div>
       <div className="flex items-center w-3/4">
         <MainContent />
@@ -61,13 +62,13 @@ function MainContent() {
 
 function DisplayPic() {
   return (
-    <div>
+    <div className="rounded-full truncate select-none">
       <Image
         alt="dp"
-        // src="https://avatars.githubusercontent.com/u/30749439?v=4"
-        src="/favicon.ico"
-        width={200}
-        height={200}
+        src="https://avatars.githubusercontent.com/u/30749439?v=4"
+        // src="/favicon.ico"
+        width={300}
+        height={300}
       />
     </div>
   );
@@ -91,6 +92,13 @@ function TechStack() {
         className="ml-5"
         alt="react"
         src={react}
+        width={techIconsSize}
+        height={techIconsSize}
+      />
+      <Image
+        className="ml-5"
+        alt="next"
+        src={next}
         width={techIconsSize}
         height={techIconsSize}
       />
