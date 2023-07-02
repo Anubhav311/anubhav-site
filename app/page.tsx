@@ -3,13 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaTwitter } from "react-icons/fa";
+import { FaTwitter, FaSun } from "react-icons/fa";
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiFillYoutube,
   AiFillInstagram,
 } from "react-icons/ai";
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 
 import wave from "./assets/wave.png";
 import node from "./assets/icons8-nodejs-240.png";
@@ -36,11 +37,17 @@ export default function Home() {
           : "flex min-h-screen flex-col items-center justify-around p-24 text-black bg-white"
       }
     >
-      <div className="ml-10 pt-5 font-bold absolute top-0 left-0">
+      <div className="ml-10 pt-7 font-bold absolute top-0 left-0">
         <p>Anubhav Bhambri</p>
       </div>
-      <div className="mr-10 pt-5 font-bold absolute top-0 right-0">
-        <button onClick={toggleDarkMode}>{darkMode ? "Light" : "Dark"}</button>
+      <div className="mr-10 pt-7 font-bold absolute top-0 right-0">
+        <button onClick={toggleDarkMode}>
+          {darkMode ? (
+            <BsFillSunFill size={25} />
+          ) : (
+            <BsFillMoonStarsFill size={20} />
+          )}
+        </button>
       </div>
       <div className="flex items-center w-3/4">
         <MainContent />
