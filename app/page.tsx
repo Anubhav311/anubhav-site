@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaTwitter } from "react-icons/fa";
 import {
   AiFillGithub,
@@ -56,7 +57,7 @@ function MainContent() {
       <div className="flex items-center justify-start mb-10 relative w-3/4">
         <p className="text-6xl font-extrabold">Full-Stack MERN Developer</p>
         <Image
-          className="absolute bottom-0 right-40"
+          className="absolute bottom-0 right-20"
           alt="wave-hand"
           // src="https://avatars.githubusercontent.com/u/30749439?v=4"
           src={wave}
@@ -69,9 +70,18 @@ function MainContent() {
         based in New Delhi, India. 📍
       </p>
       <div className="flex mt-8">
-        <AiFillGithub size={35} />
-        <AiFillLinkedin size={35} style={{ marginLeft: "15px" }} />
-        <FaTwitter size={35} style={{ marginLeft: "15px" }} />
+        <Link href="https://github.com/Anubhav311" target="_blank">
+          <AiFillGithub size={35} />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/anubhav-bhambri/"
+          target="_blank"
+        >
+          <AiFillLinkedin size={35} style={{ marginLeft: "15px" }} />
+        </Link>
+        <Link href="https://twitter.com/anubhav_bhambri" target="_blank">
+          <FaTwitter size={35} style={{ marginLeft: "15px" }} />
+        </Link>
         {/* <AiFillYoutube size={35} /> */}
         {/* <AiFillInstagram size={35} /> */}
       </div>
@@ -86,8 +96,8 @@ function DisplayPic() {
         alt="dp"
         src="https://avatars.githubusercontent.com/u/30749439?v=4"
         // src="/favicon.ico"
-        width={300}
-        height={300}
+        width={350}
+        height={350}
       />
     </div>
   );
