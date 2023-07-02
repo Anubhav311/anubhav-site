@@ -7,20 +7,21 @@ import { FaTwitter, FaSun } from "react-icons/fa";
 import {
   AiFillGithub,
   AiFillLinkedin,
-  AiFillYoutube,
-  AiFillInstagram,
+  // AiFillYoutube,
+  // AiFillInstagram,
 } from "react-icons/ai";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 
 import wave from "./assets/wave.png";
-import node from "./assets/icons8-nodejs-240.png";
-import react from "./assets/icons8-react-native-480.png";
-import mongo from "./assets/icons8-mongodb-480.png";
-import postgres from "./assets/icons8-postgresql-480.png";
-import aws from "./assets/icons8-amazon-web-services-480.png";
-import firebase from "./assets/icons8-firebase-480.png";
-import docker from "./assets/icons8-docker-240.png";
-import next from "./assets/NEXTJS/icon/dark-background/nextjs-icon-dark-background.png";
+import node from "./assets/nodejs.png";
+import react from "./assets/react.png";
+import mongo from "./assets/mongodb.png";
+import postgres from "./assets/postgresql.png";
+import awsDark from "./assets/awsDark.png";
+import awsWhite from "./assets/awsWhite.png";
+import firebase from "./assets/firebase.png";
+import docker from "./assets/docker.png";
+import next from "./assets/nextjs.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -53,7 +54,7 @@ export default function Home() {
         <MainContent />
         <DisplayPic />
       </div>
-      <TechStack />
+      <TechStack darkMode={darkMode} />
     </main>
   );
 }
@@ -66,7 +67,6 @@ function MainContent() {
         <Image
           className="absolute bottom-0 right-20"
           alt="wave-hand"
-          // src="https://avatars.githubusercontent.com/u/30749439?v=4"
           src={wave}
           width={60}
           height={60}
@@ -102,7 +102,6 @@ function DisplayPic() {
       <Image
         alt="dp"
         src="https://avatars.githubusercontent.com/u/30749439?v=4"
-        // src="/favicon.ico"
         width={350}
         height={350}
       />
@@ -110,7 +109,11 @@ function DisplayPic() {
   );
 }
 
-function TechStack() {
+type childComponentProps = {
+  darkMode: boolean;
+};
+
+function TechStack({ darkMode }: childComponentProps) {
   const techIconsSize = 40;
   return (
     <div className="flex items-center w-3/4">
@@ -155,7 +158,7 @@ function TechStack() {
       <Image
         className="ml-5"
         alt="aws"
-        src={aws}
+        src={darkMode ? awsWhite : awsDark}
         width={techIconsSize}
         height={techIconsSize}
       />
