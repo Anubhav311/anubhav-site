@@ -22,6 +22,7 @@ import awsWhite from "./assets/awsWhite.png";
 import firebase from "./assets/firebase.png";
 import docker from "./assets/docker.png";
 import next from "./assets/nextjs.png";
+import typescript from "./assets/typescript.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -124,6 +125,13 @@ function TechStack({ darkMode }: childComponentProps) {
         className="ml-5"
         alt="node"
         src={node}
+        width={techIconsSize}
+        height={techIconsSize}
+      />
+      <Image
+        className="ml-5"
+        alt="node"
+        src={typescript}
         width={techIconsSize}
         height={techIconsSize}
       />
